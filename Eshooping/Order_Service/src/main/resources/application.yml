@@ -1,0 +1,30 @@
+server:
+  port: 8085 # different for each service
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+      show-sql: true
+spring:
+  application:
+    name: ORDER_SERVICE # change for each service
+  datasource:
+    url: jdbc:mysql://localhost:3306/ORDERSERVICE_DB
+    username: root
+    password: kalpesh@123
+
+
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL8Dialect
+
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
